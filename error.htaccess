@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+Options -Multiviews
+Options +FollowSymLinks
+
+RewriteEngine on
+
+RewriteBase /circleodlife
+
+RewriteCond $1 !^(index\.php|theme\assets|robots\.txt)
+RewriteRule ^(.*)$ index.php?/$1 [L]
+</IfModule>
